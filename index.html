@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A visual travel guide to Japan’s most breathtaking natural landscapes, from Mount Fuji to Yakushima Island.">
+    <title>Japan Travel Guide | Natural Wonders & Scenic Routes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tooplate-living-parallax.css">
+<!--
+
+Tooplate 2150 Living Parallax
+
+https://www.tooplate.com/view/2150-living-parallax
+
+Free HTML CSS Template
+
+-->
+</head>
+<body>
+    <!-- UI Toggle Button - Always Visible -->
+    <button class="ui-toggle-btn" id="uiToggleBtn" aria-label="Toggle UI Visibility">
+        <svg viewBox="0 0 24 24" id="eyeIcon">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+
+    <!-- Header -->
+    <header class="ui-element">
+        <div class="logo">JAPAN TRAVEL GUIDE</div>
+        <nav id="mainNav">
+            <a onclick="openOverlay('about')">About</a>
+            <a onclick="openOverlay('testimonials')">Testimonials</a>
+            <a onclick="openOverlay('contact')">Contact</a>
+            <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="slider-wrapper">
+        <div class="slider-container" id="slider">
+            <!-- Slide 1 -->
+            <div class="slide active" data-index="0">
+                <div class="parallax-layer background-layer">
+                    <img src="images/arashiyama.jpg" alt="Arashiyama">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Arashiyama Bamboo Grove</h2>
+                    <p>Soaring bamboo stalks sway and whisper in the wind, creating an immersive and otherworldly natural corridor</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-index="1">
+                <div class="parallax-layer background-layer">
+                    <img src="images/aso_caldera.jpg" alt="Aso">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Aso Caldera</h2>
+                    <p>One of the world’s largest volcanic calderas, offering vast grasslands and steaming craters that feel almost otherworldly</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-index="2">
+                <div class="parallax-layer background-layer">
+                    <img src="images/fuji.jpg" alt="Fuji">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Mount Fuji</h2>
+                    <p>A near-perfect reflection of Japan’s sacred peak rising above calm water, framed by seasonal cherry blossoms or autumn foliage</p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-index="3">
+                <div class="parallax-layer background-layer">
+                    <img src="images/kamikochi.jpg" alt="Kamikochi">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Kamikochi Valley</h2>
+                    <p>A pristine alpine valley of crystal-clear rivers, wetlands, and dramatic peaks that feels untouched and remote</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" data-index="4">
+                <div class="parallax-layer background-layer">
+                    <img src="images/shirakami.jpg" alt="Shirakami">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Shirakami Sanchi Forest</h2>
+                    <p>An ancient, UNESCO-protected wilderness where dense primeval forests and waterfalls create a sense of deep natural isolation</p>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide" data-index="5">
+                <div class="parallax-layer background-layer">
+                    <img src="images/nachi.jpg" alt="Nachi">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Nachi Pagoda And Waterfall</h2>
+                    <p>Japan’s tallest waterfall plunging through sacred forest, blending raw natural power with Shinto spirituality</p>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide" data-index="6">
+                <div class="parallax-layer background-layer">
+                    <img src="images/yakushima.jpg" alt="Yakushima">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Yakushima Island</h2>
+                    <p>Moss-covered ancient cedars in constant mist give the island a mythical, almost prehistoric atmosphere</p>
+                </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide" data-index="7">
+                <div class="parallax-layer background-layer">
+                    <img src="images/iya.jpg" alt="Iya">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Iya Valley</h2>
+                    <p>A deep, rugged gorge with vine bridges, sheer cliffs, and remote mountain villages suspended above emerald rivers</p>
+                </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slide" data-index="8">
+                <div class="parallax-layer background-layer">
+                    <img src="images/tateyama.jpg" alt="Tateyama">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Tateyama Kurobe Alpine Route</h2>
+                    <p>Towering snow walls lining a mountain road create a surreal, monumental landscape in spring</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav-arrow prev ui-element">‹</div>
+            <div class="nav-arrow next ui-element">›</div>
+
+            <!-- Dots -->
+            <div class="dots-container ui-element">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+                <span class="dot" data-slide="5"></span>
+                <span class="dot" data-slide="6"></span>
+                <span class="dot" data-slide="7"></span>
+                <span class="dot" data-slide="8"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Parallax Shapes -->
+    <div class="parallax-shape shape-1 ui-element"></div>
+    <div class="parallax-shape shape-2 ui-element"></div>
+
+    <!-- Play/Pause Button -->
+    <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
+        <svg viewBox="0 0 24 24">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container ui-element">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Duration Controls -->
+    <div class="duration-controls ui-element">
+        <button class="duration-btn" id="decreaseDuration" aria-label="Decrease Duration">−</button>
+        <div class="duration-display" id="durationDisplay">5<span>s</span></div>
+        <button class="duration-btn" id="increaseDuration" aria-label="Increase Duration">+</button>
+    </div>
+
+    <!-- About Overlay -->
+    <div class="overlay" id="aboutOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('about')">×</button>
+			<h2>About</h2>
+			<p>Welcome to a visual journey through the natural landscapes of Japan — a collection dedicated to quiet moments, seasonal beauty, and the harmony between land and light.</p>
+			<p>This gallery showcases forests, mountains, coastlines, and countryside scenes captured across Japan. From mist-covered cedar groves and alpine ridges to tranquil lakes and rural paths, each image reflects the subtle atmosphere that defines Japanese nature.</p>
+			<p>The experience is designed to be calm and immersive. Smooth parallax motion adds depth to every photograph, allowing each scene to unfold naturally as you scroll, without distraction.</p>
+			<p>Rather than focusing on landmarks, the gallery highlights texture, weather, and mood — the details often noticed only when slowing down.</p>
+			<p>All images are presented in a fullscreen format to preserve composition and scale, encouraging uninterrupted viewing and exploration.</p>
+			<p>Seasonal changes, shifting light, and quiet landscapes form the core of this collection, offering a space to pause and appreciate the natural rhythm of Japan.</p>
+            <img src="images/aokigahara.jpg" alt="Aokigahara" class="overlay-image">
+        </div>
+    </div>
+
+    <!-- Testimonials Overlay -->
+    <div class="overlay" id="testimonialsOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('testimonials')">×</button>
+            <h2>Testimonials</h2>
+            
+            <div class="testimonial-card">
+                <p>"This gallery is absolutely stunning! The parallax effect adds such an immersive quality to the images. I found myself scrolling through multiple times just to experience the smooth transitions and beautiful photography."</p>
+                <p class="author">Sarah Mitchell, Photography Enthusiast</p>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"As a web designer, I'm always looking for inspiration. This gallery perfectly balances aesthetics with functionality. The responsive design works flawlessly on all my devices, and the user experience is simply outstanding."</p>
+                <p class="author">James Rodriguez, Web Designer</p>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"I've seen many photo galleries online, but none compare to this one. The attention to detail, the smooth animations, and the curated selection of images make this a truly memorable experience. Highly recommended!"</p>
+                <p class="author">Emily Chen, Creative Director</p>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"The combination of stunning visuals and innovative technology creates something truly special. Each image feels alive with the parallax movement. It's like stepping into the photographs themselves."</p>
+                <p class="author">Michael Thompson, Nature Photographer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Overlay -->
+    <div class="overlay" id="contactOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('contact')">×</button>
+            <h2>Contact</h2>
+            <p>Have a question or want to collaborate? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+            
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+                
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your.email@example.com" required>
+                
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="What's this about?" required>
+                
+                <label>Message</label>
+                <textarea name="message" placeholder="Tell us more..." required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ui-element">
+        <p>Copyright © 2026 Japan Travel Guide</p>
+    </footer>
+<script src="tooplate-living-scripts.js"></script>
+</body>
+</html>
